@@ -12,8 +12,10 @@ def create_person_list(people: list) -> list[Person]:
     if not people:
         return []
 
-    for person_data in people:
+    [
         Person(name=person_data["name"], age=person_data["age"])
+        for person_data in people
+    ]
 
     for person_data in people:
         name = person_data["name"]
